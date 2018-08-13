@@ -28,7 +28,6 @@ mag_meancrossing_t=[]
 mag_z_correlation_t=[]
 exercise=[]
 subject_index=[0]
-kk=0 # used to index features
 
 # importing data 
 for i in range (0,len(subjects_cv)): # looping through each subject to extract data 
@@ -74,11 +73,8 @@ for i in range (0,len(subjects_cv)): # looping through each subject to extract d
             mag_z_correlation_matrix=np.corrcoef(aMag[k:k+window_length],aZ[k:k+window_length])
             mag_z_correlation_t.append(mag_z_correlation_matrix[0,1]) 
     
-            kk=kk+1
             
-    subject_index.append(kk)# index that describes the index at which each subjects data begins (Used for CV)
-     
-  
+    
 # creating feature (X) and class(y) data sets
 y=np.asarray(exercise) 
 
