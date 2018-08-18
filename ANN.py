@@ -10,7 +10,7 @@ import os
 # Data Pre-processing 
 data_directory = "Data Collection 2"
 
-subjects_cv = os.listdir(data_directory) #subjects to be used for cross validation
+subjects = os.listdir(data_directory) # List of subjects that will be used
 n_features = 5 # number of features used in model
 
 window_length_s=2 #sliding window size in seconds
@@ -29,13 +29,13 @@ mag_z_correlation_t=[]
 exercise=[]
 
 # importing data 
-for i in range (0,len(subjects_cv)): # looping through each subject to extract data 
+for i in range (0,len(subjects)): # looping through each subject to extract data 
     
-    files=os.listdir(os.path.join(data_directory,subjects_cv[i])) # files in current subjects directory
+    files=os.listdir(os.path.join(data_directory,subjects[i])) # files in current subjects directory
     
     for j in range (0,len(files)): # looping through the files within each subect folder
          
-        file_path=os.path.join(data_directory,subjects_cv[i],files[j])
+        file_path=os.path.join(data_directory,subjects[i],files[j])
         
         dataset = pd.read_csv(file_path)
         
