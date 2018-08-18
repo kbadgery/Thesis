@@ -60,7 +60,7 @@ for i in range (0,len(subjects_cv)): # looping through each subject to extract d
             # Standard Dev Acceleartion Z-axis time-domain
             # Standard Dev Acceleartion XY-axis time-domain
             # Mean Crossings Acceleration XY-axis time-domain
-            # Correlation Coefficient between XY and Z Axes
+            # Correlation Coefficient between XY and Z Axes time-domain
             
             z_mean_t.append(np.mean(aX[k:k+window_length]))  
             z_std_t.append(np.std(aX[k:k+window_length])) 
