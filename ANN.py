@@ -110,7 +110,7 @@ validation accuracy while mininimizing the difference between training accuracy 
 
 from keras.models import Sequential
 from keras.layers import Dense
-from keras.optimizers import Adam, SGD
+from keras.optimizers import Adam
 from talos.metrics.keras_metrics import recall
 
 classifier = Sequential()
