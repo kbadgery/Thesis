@@ -124,10 +124,11 @@ classifier.fit(X_train, y_train, batch_size = 10, epochs = 400)
 
 y_pred_prob = classifier.predict(X_test)
 
+# convert the predicted probabilities of each exercise to an actual prediction
 y_pred = (y_pred_prob == y_pred_prob.max(axis=1)[:,None]).astype(int)
 
+# perform inverse transform on one-hot encoded data to get final predictions array
 y_pred_1D = encoder_y.inverse_transform(y_pred,threshold=1)
-
 y_test_1D = encoder_y.inverse_transform(y_test,threshold=1)
 
 
