@@ -27,7 +27,6 @@ mag_std_t=[]
 mag_meancrossing_t=[]
 mag_z_correlation_t=[]
 exercise=[]
-subject_index=[0]
 
 # importing data 
 for i in range (0,len(subjects_cv)): # looping through each subject to extract data 
